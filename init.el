@@ -27,4 +27,9 @@
 ;;
 ;;; License: MIT
 
+(setq user-init-file (or load-file-name (buffer-file-name))
+      user-emacs-directory (file-name-directory user-init-file))
+
 (require 'core (concat user-emacs-directory "core/core"))
+
+(doom! :config private)
